@@ -1,11 +1,14 @@
 package kr.ac.kumoh.ce.s20230346.s26w02modifier
 
+import android.R.attr.fontStyle
+import android.R.attr.fontWeight
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -16,6 +19,7 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kr.ac.kumoh.ce.s20230346.s26w02modifier.ui.theme.S26W02ModifierTheme
 
@@ -40,7 +44,10 @@ class MainActivity : ComponentActivity() {
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
-        modifier = modifier.background(Color.Blue),
+        modifier = modifier
+            .fillMaxWidth()
+            .background(Color.Blue)
+            .padding(30.dp),
         color = Color.Yellow,
         fontSize = 30.sp,
         fontStyle = FontStyle.Italic,
